@@ -1,0 +1,64 @@
+﻿potentially needed code
+
+peakK562 = Read.readPeak(peakK562_file);
+        int count = 0;
+        Parallel.ForEach(peakK562, options, peak =>
+        {
+            peak.peakSeq(gRCh38);
+
+            count++;
+            Console.WriteLine(count + "/" + peakK562.Count);
+            peak.write("peakK562");
+            peak.free();
+        });
+        
+        
+        peakHepG2 = Read.readPeak(peakHepG2_file);
+        count = 0;
+        Parallel.ForEach(peakHepG2, options, peak =>
+        {
+            peak.peakSeq(gRCh38);
+
+            count++;
+            Console.WriteLine(count + "/" + peakHepG2.Count);
+            peak.write("peakHepG2");
+            peak.free();
+        });
+
+        //string file_peakK562 = @"Data\ResultPeak_peakK562.txt";
+        //Writer.writePeak(result_peakK562, div, file_peakK562);
+
+        //result_peakHepG2 = Read.readPeakSeq(peakHepG2_file, promoters);
+        //string file_peakHepG2 = @"Data\ResultPeak_peakHepG2.txt";
+        //Writer.writePeak(result_peakHepG2, div, file_peakHepG2);
+
+        /*
+        //peakHepG2 = Read.readPeak(peakHepG2_file);
+        promoters = Read.readPromoters();
+        foreach (Peak peak in peakK562)
+        {
+            peak.doGPUmatch(promoters, result_peakK562);
+            
+            count++;
+            Console.WriteLine(count + "/" + peakK562.Count);
+        }
+        
+        peakHepG2 = Read.readPeak(peakHepG2_file);
+        count = 0;
+        foreach (Peak peak in peakHepG2)
+        {
+            peak.doGPUmatch(promoters, result_peakHepG2);
+
+            count++;
+            Console.WriteLine(count + "/" + peakHepG2.Count);
+        }
+        */
+
+
+
+
+        //foreach (Peak peak in peakHepG2)
+        //{
+        //    peak.peakSeq(gRCh38);
+        //}
+        /*
