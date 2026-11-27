@@ -1,4 +1,4 @@
-# RyhaanSeq
+# BIOT-Promoter-RepeatsAnalysis
 
 A C# / .NET pipeline for exploring the sequence context of human promoters on the **GRCh38 (hg38)** reference genome. It finds:
 
